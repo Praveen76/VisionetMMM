@@ -29,7 +29,7 @@ function getDefaultDate() {
     var defaultDate = new Date();
     //defaultDate.setDate(6)
     if (defaultDate.getDate() > 5) {
-        defaultDate.setMonth(defaultDate.getMonth() + 1, 1);
+        defaultDate.setMonth(defaultDate.getMonth(), 1);
     }
     return defaultDate;
 }
