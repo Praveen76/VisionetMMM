@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "terraformaksdevcluster-e190"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "terraformaksdevcluster-e190"
+  template:
+    metadata:
+      labels:
+        app: "terraformaksdevcluster-e190"
+    spec:
+      containers:
+        - name: "terraformaksdevcluster-e190"
+          image: "acrforaksdemo4.azurecr.io/terraformaksdevcluster"
+          ports:
+          - containerPort: 80
